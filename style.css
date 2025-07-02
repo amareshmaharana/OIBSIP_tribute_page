@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #89BFF8;
+    color: #fff;
+    font-family: 'HP Simplified', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    padding: 20px;
+}
+
+body:not(:has(:target)) #home {
+      display: block;
+}
+
+:target {
+      display: block;
+}
+
+.nav-bar {
+    display: flex;
+    width: 70%;
+    height: 10%;
+    margin-bottom: 20px;
+    background-color: #0061A2;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.nav-bar .title {
+    margin-left: 11rem;
+    margin-top: 15px;
+    font-size: 35px;
+}
+
+.home img {
+    width: 25%;
+    margin-left: 55rem;
+    border-radius: 10px;
+}
+
+.heading {
+    font-size: 3rem;
+    color: #000;
+    /* margin-left: 15rem;
+    margin-top: 40px; */
+}
+
+.timeline {
+    font-size: 1.5rem;
+    color: #000;
+    /* margin-left: 20rem;
+    margin-top: 20px; */
+}
+
+.headline {
+    display: grid;
+    margin-left: 15rem;
+    bottom: 10px;
+    position: relative;
+    top: 10rem;
+}
+
+.about-btn {
+    display: inline-block;
+    width: 10%;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    top: 30px;
+}
+
+.about-btn a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+.page {
+      display: none;
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
