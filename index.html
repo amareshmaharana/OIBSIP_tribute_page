@@ -1,39 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="style.css" rel="stylesheet" />
-    <title>Tribute Page</title>
-  </head>
-  <body>
-    <nav class="nav-bar">
-      <h1 class="title">A TRIBUTE TO HONORABLE PRESIDENT OF INDIA</h1>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tribute Page - Dr. APJ Abdul Kalam</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button id="themeToggle">🌙 Dark Mode</button>
 
-    <div class="home" id="home">
-      <div class="headline">
-        <h1 class="heading">Dr. APJ Abdul Kalam</h1>
-        <p class="timeline">1931 - 2015</p>
+  <div class="tribute-container fade-in">
+    <header>
+      <h1>-- Dr. A.P.J. Abdul Kalam --</h1>
+      <p class="subtitle">The Missile Man of India</p>
+    </header>
 
-        <!-- <a href="#about"><button class="about-btn">About</button></a> -->
-        <button class="about-btn"><a href="#about">About</a></button>
+    <section class="image-section">
+      <img src="./img/A._P._J._Abdul_Kalam_in_2008.jpg" alt="Dr. APJ Abdul Kalam" />
+    </section>
+
+    <section class="bio">
+      <h2>Biography</h2>
+      <p>
+        Dr. A.P.J. Abdul Kalam was an Indian aerospace scientist and the 11th President of India. Known as the "Missile Man" for his work on ballistic missile and launch vehicle technology, he played a pivotal role in India's Pokhran-II nuclear tests in 1998.
+      </p>
+      <p>
+        He was also a beloved teacher, author, and visionary, who inspired millions of youth with his life, ideas, and humility. Dr. Kalam was born on October 15, 1931, and passed away on July 27, 2015, while delivering a lecture at IIM Shillong.
+      </p>
+      <p>
+        Throughout his career, Kalam remained closely associated with the Indian Space Research Organisation (ISRO) and the Defence Research and Development Organisation (DRDO). His leadership in the development of India’s first indigenous Satellite Launch Vehicle (SLV-III) earned him national recognition.
+      </p>
+      <p>
+        Apart from his scientific contributions, Dr. Kalam authored numerous inspirational books, including <em>Wings of Fire</em>, <em>Ignited Minds</em>, and <em>India 2020</em>, which continue to motivate generations of Indians. His vision for a developed India emphasized education, innovation, and self-reliance.
+      </p>
+      <p>
+        Even after serving as President, he devoted his time to interacting with students across the country, encouraging them to dream big and work hard. He often said, “The youth need to be enabled to become job generators from job seekers.”
+      </p>
+    </section>
+
+    <section class="timeline">
+      <h2>Timeline of Achievements</h2>
+      <ul>
+        <li><span>1969:</span> Joined ISRO and led India's first SLV project.</li>
+        <li><span>1980:</span> Successfully launched the Rohini satellite into orbit.</li>
+        <li><span>1992:</span> Appointed as Chief Scientific Adviser to the Prime Minister of India.</li>
+        <li><span>1998:</span> Played a major role in Pokhran-II nuclear tests.</li>
+        <li><span>2002:</span> Became the 11th President of India.</li>
+        <li><span>2012:</span> Launched the “What Can I Give” movement for youth against corruption.</li>
+        <li><span>2015:</span> Passed away while delivering a lecture at IIM Shillong.</li>
+      </ul>
+    </section>
+
+    <section class="quote-slider">
+      <h2>Inspiring Quotes</h2>
+      <div class="slider">
+        <p id="quoteText">“Dream, dream, dream. Dreams transform into thoughts and thoughts result in action.”</p>
       </div>
+    </section>
 
-      <div class="img">
-        <img src="/A._P._J._Abdul_Kalam_in_2008.jpg" alt="APJ Abdul Kalam" />
-      </div>
-    </div>
+    <footer>
+      <p>Created with ❤️ to honor Dr. Kalam</p>
+    </footer>
+  </div>
 
-
-
-    <!-- ABOUT -->
-
-    <div class="about" id="about">
-      <div id="home" class="page">
-        <h1>About of Our PRESIDENT</h1>
-      </div>
-    </div>
-    
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
