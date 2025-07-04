@@ -1,95 +1,164 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --bg-color: #1c1c1c;
+  --text-color: #fff;
+  --accent: #ffd700;
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+.light-mode {
+  --bg-color: #f4f4f4;
+  --text-color: #111;
+  --card-bg: #fff;
 }
 
 body {
-    background-color: #89BFF8;
-    color: #fff;
-    font-family: 'HP Simplified', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    padding: 20px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
 }
 
-body:not(:has(:target)) #home {
-      display: block;
+#themeToggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: var(--accent);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
 }
 
-:target {
-      display: block;
+.tribute-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease-in-out;
 }
 
-.nav-bar {
-    display: flex;
-    width: 70%;
-    height: 10%;
-    margin-bottom: 20px;
-    background-color: #0061A2;
-    border-radius: 10px;
-    border: 1px solid #000;
+header {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.nav-bar .title {
-    margin-left: 11rem;
-    margin-top: 15px;
-    font-size: 35px;
+header h1 {
+  font-size: 3rem;
+  color: var(--accent);
 }
 
-.home img {
-    width: 25%;
-    margin-left: 55rem;
-    border-radius: 10px;
+.subtitle {
+  font-size: 1.5rem;
+  color: #aaa;
 }
 
-.heading {
-    font-size: 3rem;
-    color: #000;
-    /* margin-left: 15rem;
-    margin-top: 40px; */
+.image-section {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.timeline {
-    font-size: 1.5rem;
-    color: #000;
-    /* margin-left: 20rem;
-    margin-top: 20px; */
+.image-section img {
+  max-width: 100%;
+  border-radius: 12px;
+  border: 4px solid var(--accent);
 }
 
-.headline {
-    display: grid;
-    margin-left: 15rem;
-    bottom: 10px;
-    position: relative;
-    top: 10rem;
+.bio h2,
+.timeline h2,
+.quote-slider h2 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-.about-btn {
-    display: inline-block;
-    width: 10%;
-    padding: 10px;
-    font-size: 20px;
-    border: 1px solid;
-    border-radius: 10px;
-    cursor: pointer;
-    position: relative;
-    top: 30px;
+.timeline ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-.about-btn a {
-    text-decoration: none;
-    color: #000;
-    font-weight: 600;
+.timeline li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  border-left: 3px solid var(--accent);
 }
 
-.page {
-      display: none;
-      padding: 20px;
-      border: 1px solid #ccc;
-      margin-top: 20px;
-    }
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.timeline span {
+  font-weight: bold;
+  color: var(--accent);
+  margin-right: 0.5rem;
+}
+
+.quote-slider {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.slider {
+  max-width: 700px;
+  margin: 0 auto;
+  font-style: italic;
+  background: rgba(255,255,255,0.1);
+  padding: 1rem 2rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  min-height: 80px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+footer {
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* Fade-in effect */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .tribute-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  #themeToggle {
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
